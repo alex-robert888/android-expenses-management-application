@@ -17,5 +17,5 @@ app.get("/", ( _: Request, res: Response) => {
 // Start the server on localhost:8080
 const PORT = 8080;
 app.listen(PORT, () => {
-    console.log(`Server started on http://localhost:${ port }.`);
+    console.log(`Server started on http://localhost:${ PORT }.`);
 });
