@@ -1,7 +1,10 @@
-import { Request, Response } from 'express';
+import { Request, Response, NextFunction } from 'express';
 const express = require("express");
 const cors    = require("cors");
 const morgan  = require("morgan");
+
+// Routers
+const authenticationRouter = require('./routers/authenticationRouter'); 
 
 // Initialize app and middlewares
 const app = express()
@@ -9,10 +12,14 @@ app.use(cors());
 app.use(morgan('combined'))
 app.use(express.json());
 
-// Delegate requests & handle errors
-app.get("/", ( _: Request, res: Response) => {
-  res.send("Hello world!");
-});
+// Delegate requests to routers
+app.use('/auth', authenticationRouter);
+
+// Handle errors
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+  console.error(err)
+  res.status(500).send(err.message)
+})
 
 // Start the server on localhost:8080
 const PORT = 8080;
