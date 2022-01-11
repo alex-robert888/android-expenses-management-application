@@ -1,10 +1,17 @@
 import { Request, Response, NextFunction } from 'express';
-const express = require("express");
-const cors    = require("cors");
-const morgan  = require("morgan");
+const express   = require("express");
+const cors      = require("cors");
+const morgan    = require("morgan");
+const dbConnect = require("./database/connect");
+
+// .env
+require("dotenv").config();
 
 // Routers
 const authenticationRouter = require('./routers/authenticationRouter'); 
+
+// Connect to the database
+dbConnect();
 
 // Initialize app and middlewares
 const app = express()
