@@ -18,14 +18,4 @@ class MainActivity : AppCompatActivity() {
         eventHandlers = MainActivityEventHandlers(this);
         binding.eventHandlers = eventHandlers;
     }
-
-    fun redirectToRegisterPage(view: View) {
-        val intent = Intent(this, RegisterActivity::class.java);
-        startActivity(intent);
-    }
-
-    fun redirectToLogInPage(view: View) {
-        val intent = Intent(this, LogInActivity::class.java);
-        startActivity(intent);
-    }
 }

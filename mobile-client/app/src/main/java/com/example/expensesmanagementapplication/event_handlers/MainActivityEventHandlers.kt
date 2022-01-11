@@ -11,11 +11,13 @@ class MainActivityEventHandlers(_context: Context) {
     private val context: Context = _context;
 
     fun onRegisterButtonClick(view: View) {
+        // Redirect to the register activity
         val intent = Intent(context, RegisterActivity::class.java);
         context.startActivity(intent);
     }
 
     fun onLogInButtonClick(view: View) {
+        // Redirect to the log in activity
         val intent = Intent(context, LogInActivity::class.java);
         context.startActivity(intent);
     }

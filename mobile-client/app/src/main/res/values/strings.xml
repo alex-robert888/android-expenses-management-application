@@ -15,4 +15,7 @@
     <string name="nice_to_meet_you">Nice to meet you!</string>
     <string name="just_a_moment_to_get_you_started">Just a moment to get you started.</string>
     <string name="name">Name</string>
+    <string name="back_button">Back button</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 </resources>
