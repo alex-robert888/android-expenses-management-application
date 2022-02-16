@@ -22,6 +22,12 @@ app.use(express.json());
 // Delegate requests to routers
 app.use('/auth', authenticationRouter);
 
+app.get("/", (req: Request, res: Response) => {
+  res.json({
+    message: "Hello World!"
+  })
+})
+
 // Handle errors
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   console.error(err)

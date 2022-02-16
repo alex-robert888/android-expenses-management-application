@@ -26,13 +26,13 @@ router.post('/register', async (req: Request, res: Response, next: NextFunction)
     const mongoUser = user.initMongoModel();
     await mongoUser.save();
     
-    res.json({ 
-      message: "User successfully registered."
-    });
+    res.status(201).send("Signed up successfully.");
   } 
   catch(error) {
+    console.error(error);
     next(error);
   }
 })
+
 
 module.exports=router;

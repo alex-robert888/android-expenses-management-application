@@ -3,7 +3,7 @@
     <data>
         <variable
             name="eventHandlers"
-            type="com.example.expensesmanagementapplication.event_handlers.LogInActivityEventHandlers"
+            type="com.example.expensesmanagementapplication.activities.LogInActivityEventHandlers"
             />
     </data>
 
